@@ -4,6 +4,8 @@
   "description": "A custom HIIT workout generator with low-impact, no equipment moves.",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm start --prefix client",
     "server": "nodemon server"
   },
   "repository": {
