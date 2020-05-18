@@ -3,25 +3,23 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 import TextField from "@material-ui/core/TextField";
-import Navbar from "./components/Navbar";
 
 const GenerateExerciseForm = () => {
-  //   const [exercises, setExercises] = useState([]);
+  const [exercises, setExercises] = useState([]);
 
-  //   const [newExercise, setNewExercise] = useState({
-  //     title: "",
-  //     category: "",
-  //     description: "",
-  //   });
-  //   const handleChange = (event) => {
-  //     event.preventDefault();
-  //     setNewExercise({ [event.target.name]: event.target.value });
-  //     console.log(newExercise);
-  //   };
+  const [newExercise, setNewExercise] = useState({
+    title: "",
+    category: "",
+    description: "",
+  });
+  const handleChange = (event) => {
+    event.preventDefault();
+    setNewExercise({ [event.target.name]: event.target.value });
+    console.log(newExercise);
+  };
 
   return (
     <div>
-      <Navbar />
       <form noValidate className="test-form">
         <TextField
           id="title"

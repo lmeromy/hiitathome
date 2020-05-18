@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
+import GenerateExerciseForm from "./GenerateExerciseForm";
 
 const GenerateWorkout = () => {
   const [exercises, setExercises] = useState([]);
@@ -23,6 +24,8 @@ const GenerateWorkout = () => {
       <Typography variant="h5" align="center">
         Customize your workout!
       </Typography>
+
+      <GenerateExerciseForm />
     </div>
   );
 };

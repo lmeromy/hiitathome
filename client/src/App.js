@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 import AppRoute from "./components/AppRoute";
 import LandingPage from "./components/LandingPage/LandingPage";
-import GenerateWorkout from "./components/GenerateWorkout";
+import GenerateWorkout from "./components/GenerateWorkout/GenerateWorkout";
 import CustomWorkout from "./components/CustomWorkout";
 
 function App() {
