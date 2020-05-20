@@ -2,7 +2,10 @@ const db = require("../database");
 
 class Exercises {
   static retrieveAll(callback) {
-    db.query("SELECT title from exercises", function (err, res) {
+    db.query("SELECT title, description, category from exercises", function (
+      err,
+      res
+    ) {
       if (err.error) return callback(err);
       callback(res);
     });

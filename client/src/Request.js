@@ -3,7 +3,7 @@ export const getExercises = () => {
     .then((res) => res.json())
     .then((res) => {
       const exerciseList = res.map((ex) => ex.title);
-      setExercises(exerciseList);
-      //   console.log(exerciseList);
+      console.log(exerciseList);
+      return res;
     });
 };
