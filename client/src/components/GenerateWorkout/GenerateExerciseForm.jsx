@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Typography from "@material-ui/core/Typography";
+import React from "react";
 import Button from "@material-ui/core/Button";
-import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
+import { useFormFields } from "../Hooks/useFormFields";
 import "./GenerateWorkout.scss";
 
 const useStyles = makeStyles((theme) => ({
@@ -15,68 +14,71 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const GenerateExerciseForm = () => {
+const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
   const classes = useStyles();
-  const [exercises, setExercises] = useState([]);
-
-  const [newExercise, setNewExercise] = useState({
-    title: "",
-    category: "",
-    description: "",
+  const [fields, handleFieldChange, reset] = useFormFields({
+    type: "",
+    warmup: "",
+    cooldown: "",
+    workTime: "",
+    workInterval: "",
+    restInterval: "",
   });
-  const handleChange = (event) => {
+
+  const handleSubmit = (event) => {
     event.preventDefault();
-    setNewExercise({ [event.target.name]: event.target.value });
-    console.log(newExercise);
+    console.log(fields);
+    handleGenerateWorkout(fields);
+    reset();
   };
 
   return (
     <div className="form-container">
-      <form noValidate className={classes.root}>
+      <form noValidate className={classes.root} onSubmit={handleSubmit}>
         <div>
           <TextField
             id="type"
             name="type"
             label="Type of Workout"
             variant="outlined"
-            onChange={handleChange}
+            onChange={handleFieldChange}
           />
           <TextField
             id="warmup"
             name="warmup"
             label="Warm-up time (minutes)"
             variant="outlined"
-            onChange={handleChange}
+            onChange={handleFieldChange}
           />
           <TextField
             id="cooldown"
             name="cooldown"
             label="Cooldown time (minutes)"
             variant="outlined"
-            onChange={handleChange}
+            onChange={handleFieldChange}
           />
         </div>
         <div>
           <TextField
-            id="worktime"
-            name="worktime"
+            id="workTime"
+            name="workTime"
             label="Workout Time (minutes)"
             variant="outlined"
-            onChange={handleChange}
+            onChange={handleFieldChange}
           />
           <TextField
             id="workInterval"
             name="workInterval"
             label="Work Interval (seconds)"
             variant="outlined"
-            onChange={handleChange}
+            onChange={handleFieldChange}
           />
           <TextField
             id="restInterval"
             name="restInterval"
             label="Rest Interval (seconds)"
             variant="outlined"
-            onChange={handleChange}
+            onChange={handleFieldChange}
           />
         </div>
         <div className="form-buttons">
@@ -85,17 +87,11 @@ const GenerateExerciseForm = () => {
             variant="contained"
             size="large"
             color="secondary"
-            // onSubmit={handleSubmit}
           >
             Create My Workout!
           </Button>
 
-          <Button
-            type="reset"
-            variant="contained"
-            size="large"
-            // onSubmit={handleSubmit}
-          >
+          <Button type="reset" variant="contained" size="large" onClick={reset}>
             Reset
           </Button>
         </div>
