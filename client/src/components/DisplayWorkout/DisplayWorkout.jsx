@@ -4,13 +4,15 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 
-const DisplayWorkout = ({ exercises }) => {
+const DisplayWorkout = ({ exercises, details }) => {
   return (
     <div>
-      {!exercises && null}
-      <Typography variant="h5" align="center">
-        Here ya go!
-      </Typography>
+      {!exercises && !details && null}
+      {details && (
+        <Typography variant="h5" align="center">
+          {details.type}
+        </Typography>
+      )}
     </div>
   );
 };

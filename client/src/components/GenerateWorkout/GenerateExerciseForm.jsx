@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
   const classes = useStyles();
-  const [fields, handleFieldChange, reset] = useFormFields({
+  const [fields, handleFieldChange] = useFormFields({
     type: "",
     warmup: "",
     cooldown: "",
@@ -25,11 +25,13 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
     restInterval: "",
   });
 
+  // const reset = () => {};
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(fields);
     handleGenerateWorkout(fields);
-    reset();
+    // reset();
   };
 
   return (
@@ -91,9 +93,9 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
             Create My Workout!
           </Button>
 
-          <Button type="reset" variant="contained" size="large" onClick={reset}>
+          {/* <Button type="reset" variant="contained" size="large" onClick={reset}>
             Reset
-          </Button>
+          </Button> */}
         </div>
       </form>
     </div>

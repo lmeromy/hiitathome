@@ -8,7 +8,7 @@ import DisplayWorkout from "../DisplayWorkout/DisplayWorkout";
 const GenerateWorkout = () => {
   const [exercises, setExercises] = useState([]);
 
-  const [newWorkout, setNewWorkout] = useState({});
+  const [newWorkout, setNewWorkout] = useState(null);
 
   useEffect(() => {
     fetch("/api/exercises")
@@ -27,7 +27,7 @@ const GenerateWorkout = () => {
 
   const generateWorkout = (workoutInfo) => {
     setNewWorkout(workoutInfo);
-    console.log(newWorkout);
+    // console.log(workoutInfo);
   };
 
   return (
