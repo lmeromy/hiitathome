@@ -1,8 +1,14 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormHelperText from "@material-ui/core/FormHelperText";
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
 import { makeStyles } from "@material-ui/core/styles";
 import { useFormFields } from "../Hooks/useFormFields";
+
 import "./GenerateWorkout.scss";
 
 const useStyles = makeStyles((theme) => ({
@@ -11,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
       width: "25ch",
     },
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
   },
 }));
 
@@ -25,26 +35,39 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
     restInterval: "",
   });
 
-  // const reset = () => {};
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(fields);
     handleGenerateWorkout(fields);
-    // reset();
   };
 
   return (
     <div className="form-container">
       <form noValidate className={classes.root} onSubmit={handleSubmit}>
         <div>
-          <TextField
-            id="type"
-            name="type"
-            label="Type of Workout"
-            variant="outlined"
-            onChange={handleFieldChange}
-          />
+          <FormControl className={classes.formControl} variant="outlined">
+            <InputLabel id="type">Type of Workout</InputLabel>
+            <Select id="type" name="type" onChange={handleFieldChange}>
+              <MenuItem value={"Low-Impact HIIT"}>Low-Impact HIIT</MenuItem>
+              <MenuItem value={"Core"}>Core</MenuItem>
+            </Select>
+            <FormHelperText>Choose a type of workout</FormHelperText>
+          </FormControl>
+          <FormControl className={classes.formControl} variant="outlined">
+            <InputLabel id="workTime">Workout Time (minutes)</InputLabel>
+            <Select id="workTime" name="workTime" onChange={handleFieldChange}>
+              <MenuItem value={10}>10</MenuItem>
+              <MenuItem value={12}>12</MenuItem>
+              <MenuItem value={15}>15</MenuItem>
+              <MenuItem value={18}>18</MenuItem>
+              <MenuItem value={20}>20</MenuItem>
+            </Select>
+            <FormHelperText>
+              Length of main workout (excluding warmup/cooldown)
+            </FormHelperText>
+          </FormControl>
+        </div>
+        <div>
           <TextField
             id="warmup"
             name="warmup"
@@ -61,27 +84,20 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
           />
         </div>
         <div>
-          <TextField
-            id="workTime"
-            name="workTime"
-            label="Workout Time (minutes)"
-            variant="outlined"
-            onChange={handleFieldChange}
-          />
-          <TextField
-            id="workInterval"
-            name="workInterval"
-            label="Work Interval (seconds)"
-            variant="outlined"
-            onChange={handleFieldChange}
-          />
-          <TextField
-            id="restInterval"
-            name="restInterval"
-            label="Rest Interval (seconds)"
-            variant="outlined"
-            onChange={handleFieldChange}
-          />
+          <FormControl className={classes.formControl} variant="outlined">
+            <InputLabel id="workInterval">Work/Rest Intervals</InputLabel>
+            <Select
+              id="workInterval"
+              name="workInterval"
+              onChange={handleFieldChange}
+            >
+              <MenuItem value={20}>20 seconds work, 10 seconds rest</MenuItem>
+              <MenuItem value={30}>30 seconds work, 30 seconds rest</MenuItem>
+              <MenuItem value={40}>40 seconds work, 20 seconds rest</MenuItem>
+              <MenuItem value={45}>45 seconds work, 15 seconds rest</MenuItem>
+            </Select>
+            <FormHelperText>Work hard, then take a breather</FormHelperText>
+          </FormControl>
         </div>
         <div className="form-buttons">
           <Button
@@ -92,8 +108,13 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
           >
             Create My Workout!
           </Button>
-
-          {/* <Button type="reset" variant="contained" size="large" onClick={reset}>
+          {/* 
+          <Button
+            type="submit"
+            variant="contained"
+            size="large"
+            onClick={reset}
+          >
             Reset
           </Button> */}
         </div>
