@@ -14,14 +14,7 @@ const GenerateWorkout = () => {
     fetch("/api/exercises")
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
-        const exerciseList = res.map((ex) => [
-          ex.title,
-          ex.category,
-          ex.description,
-        ]);
-        console.log(exerciseList);
-        setExercises(exerciseList);
+        setExercises(res);
       });
   }, []);
 
@@ -30,7 +23,7 @@ const GenerateWorkout = () => {
   };
 
   return (
-    <div>
+    <div className="main-generate-workout">
       {!newWorkout && (
         <>
           <Typography variant="h5" align="center">

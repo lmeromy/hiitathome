@@ -27,17 +27,17 @@ const useStyles = makeStyles((theme) => ({
 const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
   const classes = useStyles();
   const [fields, handleFieldChange] = useFormFields({
-    type: "",
-    warmup: "",
-    cooldown: "",
-    workTime: "",
-    workInterval: "",
+    type: "Low Impact HIIT",
+    warmup: "3",
+    cooldown: "3",
+    workTime: 10,
+    workInterval: 20,
     restInterval: "",
   });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(fields);
+
     handleGenerateWorkout(fields);
   };
 
@@ -47,15 +47,25 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
         <div>
           <FormControl className={classes.formControl} variant="outlined">
             <InputLabel id="type">Type of Workout</InputLabel>
-            <Select id="type" name="type" onChange={handleFieldChange}>
-              <MenuItem value={"Low-Impact HIIT"}>Low-Impact HIIT</MenuItem>
+            <Select
+              id="type"
+              name="type"
+              onChange={handleFieldChange}
+              defaultValue="Low Impact HIIT"
+            >
+              <MenuItem value={"Low Impact HIIT"}>Low Impact HIIT</MenuItem>
               <MenuItem value={"Core"}>Core</MenuItem>
             </Select>
             <FormHelperText>Choose a type of workout</FormHelperText>
           </FormControl>
           <FormControl className={classes.formControl} variant="outlined">
             <InputLabel id="workTime">Workout Time (minutes)</InputLabel>
-            <Select id="workTime" name="workTime" onChange={handleFieldChange}>
+            <Select
+              id="workTime"
+              name="workTime"
+              onChange={handleFieldChange}
+              defaultValue="10"
+            >
               <MenuItem value={10}>10</MenuItem>
               <MenuItem value={12}>12</MenuItem>
               <MenuItem value={15}>15</MenuItem>
@@ -74,6 +84,7 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
             label="Warm-up time (minutes)"
             variant="outlined"
             onChange={handleFieldChange}
+            defaultValue="3"
           />
           <TextField
             id="cooldown"
@@ -81,6 +92,7 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
             label="Cooldown time (minutes)"
             variant="outlined"
             onChange={handleFieldChange}
+            defaultValue="3"
           />
         </div>
         <div>
@@ -90,6 +102,7 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
               id="workInterval"
               name="workInterval"
               onChange={handleFieldChange}
+              defaultValue="20"
             >
               <MenuItem value={20}>20 seconds work, 10 seconds rest</MenuItem>
               <MenuItem value={30}>30 seconds work, 30 seconds rest</MenuItem>
@@ -108,15 +121,6 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
           >
             Create My Workout!
           </Button>
-          {/* 
-          <Button
-            type="submit"
-            variant="contained"
-            size="large"
-            onClick={reset}
-          >
-            Reset
-          </Button> */}
         </div>
       </form>
     </div>

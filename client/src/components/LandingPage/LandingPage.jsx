@@ -6,21 +6,21 @@ import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 import "./LandingPage.scss";
 
 const LandingPage = () => {
-  const [exercises, setExercises] = useState([]);
+  // const [exercises, setExercises] = useState([]);
 
-  const [newExercise, setNewExercise] = useState({
-    title: "",
-    category: "",
-    description: "",
-  });
-  const handleChange = (event) => {
-    event.preventDefault();
-    setNewExercise({ [event.target.name]: event.target.value });
-    console.log(newExercise);
-  };
+  // const [newExercise, setNewExercise] = useState({
+  //   title: "",
+  //   category: "",
+  //   description: "",
+  // });
+  // const handleChange = (event) => {
+  //   event.preventDefault();
+  //   setNewExercise({ [event.target.name]: event.target.value });
+  //
+  // };
 
   return (
-    <div>
+    <div className="main-landing-page">
       <Typography variant="h6" align="center">
         No gym access? Stuck at home? Short on time? Have bad knees?
       </Typography>

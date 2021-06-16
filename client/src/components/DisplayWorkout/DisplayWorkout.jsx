@@ -18,7 +18,7 @@ const DisplayWorkout = ({ exercises, details }) => {
       //remove chosen exercise from initial array
       exercisesArray.splice(exercisesArray.indexOf(randomExercise), 1);
     }
-    console.log(chosenExercises);
+
     return chosenExercises;
   };
 
@@ -50,8 +50,14 @@ const DisplayWorkout = ({ exercises, details }) => {
         blocks = 2;
         blockLength = 5;
     }
+    const specifiedExercisesByCategory = exercises.filter((exercise) => {
+      return exercise.category == details.type;
+    });
 
-    const myExercises = chooseExercises(exercises, blockLength);
+    const myExercises = chooseExercises(
+      specifiedExercisesByCategory,
+      blockLength
+    );
     return <WorkBlock exercises={myExercises} blocks={blocks} />;
   };
 

@@ -15,7 +15,6 @@ const GenerateExerciseForm = () => {
   const handleChange = (event) => {
     event.preventDefault();
     setNewExercise({ [event.target.name]: event.target.value });
-    console.log(newExercise);
   };
 
   return (
