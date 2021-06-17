@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Typography from "@material-ui/core/Typography";
+import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
-import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 import TextField from "@material-ui/core/TextField";
 
 const GenerateExerciseForm = () => {

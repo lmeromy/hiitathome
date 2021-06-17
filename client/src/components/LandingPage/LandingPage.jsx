@@ -1,31 +1,49 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Divider from "@material-ui/core/Divider";
 import "./LandingPage.scss";
 
 const LandingPage = () => {
-  // const [exercises, setExercises] = useState([]);
-
-  // const [newExercise, setNewExercise] = useState({
-  //   title: "",
-  //   category: "",
-  //   description: "",
-  // });
-  // const handleChange = (event) => {
-  //   event.preventDefault();
-  //   setNewExercise({ [event.target.name]: event.target.value });
-  //
-  // };
-
   return (
     <div className="main-landing-page">
       <Typography variant="h6" align="center">
-        No gym access? Stuck at home? Short on time? Have bad knees?
+        No gym access? Stuck at home? No equipment? No problem!
       </Typography>
-      <Typography variant="h5" align="center">
-        Create your custom workout now!
+
+      <div className="main-text">
+        <Typography variant="h4" align="center" color="primary">
+          Create your custom workout now!
+        </Typography>
+      </div>
+
+      <Typography variant="h6" align="center">
+        Options include:
+        <div className="landing-pg-list">
+          <List align="center">
+            <ListItem key="1">
+              <ListItemText primary="Low-impact HIIT (high intensity interval training)" />
+            </ListItem>
+            <Divider />
+            <ListItem key="2">
+              <ListItemText primary="Core" />
+            </ListItem>
+            <Divider />
+            <ListItem key="3">
+              <ListItemText primary="Lower body" />
+            </ListItem>
+            <Divider />
+            <ListItem key="4">
+              <ListItemText primary="Upper body" />
+            </ListItem>
+            <Divider />
+          </List>
+        </div>
       </Typography>
       <div className="main-button">
         <Link to={"/generate-workout"}>

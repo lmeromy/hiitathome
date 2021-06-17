@@ -4,7 +4,6 @@ import AppLayout from "./components/AppLayout";
 import AppRoute from "./components/AppRoute";
 import LandingPage from "./components/LandingPage/LandingPage";
 import GenerateWorkout from "./components/GenerateWorkout/GenerateWorkout";
-import CustomWorkout from "./components/CustomWorkout";
 
 function App() {
   return (
@@ -15,11 +14,6 @@ function App() {
           <AppRoute
             path="/generate-workout"
             component={GenerateWorkout}
-            layout={AppLayout}
-          />
-          <AppRoute
-            path="/my-custom-workout"
-            component={CustomWorkout}
             layout={AppLayout}
           />
         </Switch>
