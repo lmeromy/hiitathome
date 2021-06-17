@@ -47,7 +47,7 @@ const DisplayWorkout = ({ exercises, details }) => {
         blockLength = 5;
     }
     const specifiedExercisesByCategory = exercises.filter((exercise) => {
-      return exercise.category == details.type;
+      return exercise.category === details.type;
     });
 
     const myExercises = chooseExercises(
