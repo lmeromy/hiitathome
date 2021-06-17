@@ -45,7 +45,7 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
     <div className="form-container">
       <form noValidate className={classes.root} onSubmit={handleSubmit}>
         <div>
-          <FormControl className={classes.formControl} variant="outlined">
+          <FormControl className={classes.formControl} variant="filled">
             <InputLabel id="type">Type of Workout</InputLabel>
             <Select
               id="type"
@@ -58,7 +58,7 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
             </Select>
             <FormHelperText>Choose a type of workout</FormHelperText>
           </FormControl>
-          <FormControl className={classes.formControl} variant="outlined">
+          <FormControl className={classes.formControl} variant="filled">
             <InputLabel id="workTime">Workout Time (minutes)</InputLabel>
             <Select
               id="workTime"
@@ -82,7 +82,7 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
             id="warmup"
             name="warmup"
             label="Warm-up time (minutes)"
-            variant="outlined"
+            variant="filled"
             onChange={handleFieldChange}
             defaultValue="3"
           />
@@ -90,13 +90,13 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
             id="cooldown"
             name="cooldown"
             label="Cooldown time (minutes)"
-            variant="outlined"
+            variant="filled"
             onChange={handleFieldChange}
             defaultValue="3"
           />
         </div>
         <div>
-          <FormControl className={classes.formControl} variant="outlined">
+          <FormControl className={classes.formControl} variant="filled">
             <InputLabel id="workInterval">Work/Rest Intervals</InputLabel>
             <Select
               id="workInterval"

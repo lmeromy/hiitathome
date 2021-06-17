@@ -1,7 +1,7 @@
 # hiitathome
 
 A custom HIIT workout generator! No equipment required for these low-impact moves: perfect for at home, outside, or at the gym.
-React front end, Express.js back end, PostgreSQL database
+Full stack app built with: React frontend, Express.js backend, PostgreSQL database
 
 ## To run this app:
 
@@ -9,8 +9,8 @@ React front end, Express.js back end, PostgreSQL database
 2. You should see the app open in your web browser at localhost:3000
 3. To see the api, take a look at http://localhost:5000/api/exercises in your browser
 
-#### note: you will need to have installed all dependencies and will need to have an instance of postgres running. You will also need to configure the server to talk to your database. See the schema file (/database/schema.sql) for the database structure.
+##### Note: you will need to have installed all dependencies and will need to have an instance of postgres running. You will also need to configure the server to talk to your database. See the schema file (/database/schema.sql) for the database structure.
 
-#### reference the following tutorial for some explanations, though I did not use this tutorial to build this app:
+##### Reference the following tutorial for some explanations, though I did not use this tutorial to build this app:
 
 https://www.freecodecamp.org/news/fullstack-react-blog-app-with-express-and-psql/
