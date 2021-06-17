@@ -10,19 +10,26 @@ export const WorkBlock = ({ exercises, blocks }) => {
   return (
     exercises.length > 0 && (
       <div className="workout-block">
-        <List align="center">
+        <List>
           {exercises.map((exercise) => (
             <>
               <ListItem key={exercise.title}>
                 <ListItemText
-                  primary={exercise.title + ": " + exercise.description}
+                  primary={exercise.title + ":"}
+                  // secondary={exercise.description}
+                  disableTypography
+                  secondary={
+                    <Typography type="body1" style={{ color: "#000" }}>
+                      {exercise.description}
+                    </Typography>
+                  }
                 />
               </ListItem>
               <Divider />
             </>
           ))}
         </List>
-        <Typography variant="h4" align="center">
+        <Typography variant="h6" align="center" color="standard">
           Repeat this block {blocks} times
         </Typography>
       </div>

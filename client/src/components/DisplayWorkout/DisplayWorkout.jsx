@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 import { WorkBlock } from "./WorkBlock";
 
 const DisplayWorkout = ({ exercises, details }) => {
   // write a function which takes in an array of items and a number
   // the function should randomly return that number of items (with no repeat items)
-
   const chooseExercises = (exercisesArray, number) => {
     const chosenExercises = [];
     for (let i = 0; i < number; i++) {
@@ -65,21 +61,22 @@ const DisplayWorkout = ({ exercises, details }) => {
     <div>
       {!exercises && !details && null}
       {details && (
-        <>
-          <Typography variant="h3" align="center">
-            Here's your workout:
-          </Typography>
-          <Typography variant="h4" align="center">
+        <div>
+          <div className="your-workout-title">
+            <Typography variant="h5" align="center">
+              YOUR WORKOUT
+            </Typography>
+          </div>
+          <Typography variant="h6" align="center" color="primary">
             Warmup: {details.warmup} minutes
           </Typography>
-
-          <Typography variant="h4" align="center">
+          <Typography variant="h6" align="center" color="primary">
             Work Block: {createWorkBlock()}
           </Typography>
-          <Typography variant="h4" align="center">
+          <Typography variant="h6" align="center" color="primary">
             Cooldown: {details.cooldown} minutes
           </Typography>
-        </>
+        </div>
       )}
     </div>
   );

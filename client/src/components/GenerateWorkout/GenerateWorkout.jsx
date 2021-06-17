@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 import GenerateExerciseForm from "./GenerateExerciseForm";
 import DisplayWorkout from "../DisplayWorkout/DisplayWorkout";
 
@@ -33,18 +32,21 @@ const GenerateWorkout = () => {
         </>
       )}
       {newWorkout && (
-        <div className="workout-container">
-          <DisplayWorkout exercises={exercises} details={newWorkout} />
-          <Button
-            className="re-do-btn"
-            variant="contained"
-            size="large"
-            color="primary"
-            onClick={() => setNewWorkout(null)}
-          >
-            Whip up a different workout!
-          </Button>
-        </div>
+        <>
+          <div className="workout-container">
+            <DisplayWorkout exercises={exercises} details={newWorkout} />
+          </div>
+          <div className="re-do-btn">
+            <Button
+              variant="contained"
+              size="large"
+              color="secondary"
+              onClick={() => setNewWorkout(null)}
+            >
+              Whip up a different workout!
+            </Button>
+          </div>
+        </>
       )}
     </div>
   );
