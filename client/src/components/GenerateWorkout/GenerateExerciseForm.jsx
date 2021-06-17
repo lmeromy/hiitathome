@@ -55,6 +55,7 @@ const GenerateExerciseForm = ({ handleGenerateWorkout }) => {
             >
               <MenuItem value={"Low Impact HIIT"}>Low Impact HIIT</MenuItem>
               <MenuItem value={"Core"}>Core</MenuItem>
+              <MenuItem value={"Lower body"}>Lower body</MenuItem>
             </Select>
             <FormHelperText>Choose a type of workout</FormHelperText>
           </FormControl>
