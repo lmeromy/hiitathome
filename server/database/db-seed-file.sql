@@ -1,18 +1,18 @@
-INSERT INTO exercises (title, description, category) VALUES ('Skaters', 'Start in a small squat. Jump sideways to the left, landing on L leg. Bring your R leg behind, and do not let it touch the floor. Reverse direction by jumping to the right with your R leg. Continue for designated interval.', 'Low impact HIIT');
+INSERT INTO exercises (title, description, category) VALUES ('Skaters', 'Start in a small squat. Jump sideways to the left, landing on L leg. Bring your R leg behind, and do not let it touch the floor. Reverse direction by jumping to the right with your R leg. Continue for designated interval.', 'Low Impact HIIT');
 
-INSERT INTO exercises (title, description, category) VALUES ('Mountain Climbers', 'Start in plank position. Pull one leg up to chest. Switch legs while keeping hips down, back flat, and abs engaged. Go slower or faster to adjust difficulty. Continue for designated interval.', 'Low impact HIIT');
+INSERT INTO exercises (title, description, category) VALUES ('Mountain Climbers', 'Start in plank position. Pull one leg up to chest. Switch legs while keeping hips down, back flat, and abs engaged. Go slower or faster to adjust difficulty. Continue for designated interval.', 'Low Impact HIIT');
 
-INSERT INTO exercises (title, description, category) VALUES ('Sidekick Squats', 'Squat down and as you stand, kick your R leg out to the side. Return to squat, and when you stand again, kick L leg out to the side. Repeat for designated interval.', 'Low impact HIIT');
+INSERT INTO exercises (title, description, category) VALUES ('Sidekick Squats', 'Squat down and as you stand, kick your R leg out to the side. Return to squat, and when you stand again, kick L leg out to the side. Repeat for designated interval.', 'Low Impact HIIT');
 
-INSERT INTO exercises (title, description, category) VALUES ('Bicycle 4x2s', 'Do 4 fast bicycle crunches followed by two slow crunches, moving opposite elbow to opposite knee. Repeat, and do not let your head/shoulders touch the ground.', 'Low impact HIIT');
+INSERT INTO exercises (title, description, category) VALUES ('Bicycle 4x2s', 'Do 4 fast bicycle crunches followed by two slow crunches, moving opposite elbow to opposite knee. Repeat, and do not let your head/shoulders touch the ground.', 'Low Impact HIIT');
 
-INSERT INTO exercises (title, description, category) VALUES ('Squat slams', 'Begin w/arms straight overhead, standing on tip toes. Squat and slam your arms down as if you are slamming an imaginary medicine ball down. Stand up back to tip toes/arms up, and repeat as fast as possible.', 'Low impact HIIT');
+INSERT INTO exercises (title, description, category) VALUES ('Squat slams', 'Begin w/arms straight overhead, standing on tip toes. Squat and slam your arms down as if you are slamming an imaginary medicine ball down. Stand up back to tip toes/arms up, and repeat as fast as possible.', 'Low Impact HIIT');
 
-INSERT INTO exercises (title, description, category) VALUES ('Rotating planks', 'From plank position, rotate body R and life R arm straight up. Return to start and repeat on L side.', 'Low impact HIIT');
+INSERT INTO exercises (title, description, category) VALUES ('Rotating planks', 'From plank position, rotate body R and life R arm straight up. Return to start and repeat on L side.', 'Low Impact HIIT');
 
-INSERT INTO exercises (title, description, category) VALUES ('Spring up + walk squats', 'Spring up standing tall, tip toes, arms overhead. Squat down, walk backward 3 steps while in squat, then spring up to tip toes. Repeat walking forward.', 'Low impact HIIT');
+INSERT INTO exercises (title, description, category) VALUES ('Spring up + walk squats', 'Spring up standing tall, tip toes, arms overhead. Squat down, walk backward 3 steps while in squat, then spring up to tip toes. Repeat walking forward.', 'Low Impact HIIT');
 
-INSERT INTO exercises (title, description, category) VALUES ('High kick back lunge', 'Kick R foot forward and then lunge back on R. Repeat 3x and then do the same on L leg.', 'Low impact HIIT');
+INSERT INTO exercises (title, description, category) VALUES ('High kick back lunge', 'Kick R foot forward and then lunge back on R. Repeat 3x and then do the same on L leg.', 'Low Impact HIIT');
 
 INSERT INTO exercises (title, description, category) VALUES ('Plank', 'Assume plank position arms extended or on forearms. Hold for the designated work interval.', 'Core');
 
