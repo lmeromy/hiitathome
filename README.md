@@ -1,5 +1,6 @@
 # hiitathome
 
+See it live: https://hiitathome.herokuapp.com
 A custom HIIT workout generator! No equipment required for these low-impact moves: perfect for at home, outside, or at the gym.
 Full stack app built with: React frontend, Express.js backend, PostgreSQL database
 
@@ -14,3 +15,11 @@ Full stack app built with: React frontend, Express.js backend, PostgreSQL databa
 ##### Reference the following tutorial for some explanations, though I did not use this tutorial to build this app:
 
 https://www.freecodecamp.org/news/fullstack-react-blog-app-with-express-and-psql/
+
+##### Deployment info:
+
+https://hiitathome.herokuapp.com
+Deployed on Heroku, use the Heroku CLI
+-To update deployed code, first commit and push all code to the master branch. Then in the CLI: `git push heroku master`
+-To open the deployed app from the CLI `heroku open`
+-To directly view the deployed postgres DB: `heroku pg:psql --app hiitathome`
