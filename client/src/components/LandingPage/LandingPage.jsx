@@ -13,7 +13,7 @@ const LandingPage = () => {
   return (
     <div className="main-landing-page">
       <Typography variant="h6" align="center">
-        No gym access? Stuck at home? No equipment? No problem!
+        No gym access? No equipment? No problem!
       </Typography>
 
       <div className="main-text">
@@ -27,19 +27,22 @@ const LandingPage = () => {
         <div className="landing-pg-list">
           <List align="center">
             <ListItem key="1">
-              <ListItemText primary="Low-impact HIIT (high intensity interval training)" />
+              <ListItemText
+                align="center"
+                primary="Low-impact HIIT (high intensity interval training)"
+              />
             </ListItem>
             <Divider />
             <ListItem key="2">
-              <ListItemText primary="Core" />
+              <ListItemText align="center" primary="Core" />
             </ListItem>
             <Divider />
             <ListItem key="3">
-              <ListItemText primary="Lower body" />
+              <ListItemText align="center" primary="Lower body" />
             </ListItem>
             <Divider />
             <ListItem key="4">
-              <ListItemText primary="Upper body" />
+              <ListItemText align="center" primary="Upper body" />
             </ListItem>
             <Divider />
           </List>

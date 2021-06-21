@@ -5,7 +5,7 @@ import AppRoute from "./components/AppRoute";
 import LandingPage from "./components/LandingPage/LandingPage";
 import GenerateWorkout from "./components/GenerateWorkout/GenerateWorkout";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Fragment>
@@ -20,6 +20,6 @@ function App() {
       </Fragment>
     </Router>
   );
-}
+};
 
 export default App;
