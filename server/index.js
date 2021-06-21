@@ -14,6 +14,16 @@ app.use(bodyParser.json());
 
 app.use("/api/exercises", require("./api/exercises"));
 
+if (ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+  app.use(
+    (req,
+    (res) => {
+      res.sendFile(path.join(__dirname, "../client/build/index.html"));
+    })
+  );
+}
+
 app.listen(PORT, () => {
   console.log(`listening to dis on port ${PORT}!!!`);
 });
