@@ -16,12 +16,9 @@ app.use("/api/exercises", require("./api/exercises"));
 
 if (ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
-  app.use(
-    (req,
-    (res) => {
-      res.sendFile(path.join(__dirname, "../client/build/index.html"));
-    })
-  );
+  app.use((res) => {
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  });
 }
 
 app.listen(PORT, () => {
