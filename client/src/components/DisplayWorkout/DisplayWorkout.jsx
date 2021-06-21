@@ -20,6 +20,7 @@ const DisplayWorkout = ({ exercises, details }) => {
 
   let blocks, blockLength;
 
+  // re-factor to do: separate to helper function in different file
   const createWorkBlock = () => {
     switch (details.workTime) {
       case 10:
