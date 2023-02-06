@@ -1,6 +1,8 @@
 # hiitathome
 
 See it live: https://hiitathome.herokuapp.com
+UPDATE: as of Jan 2023, this app is no longer live because Heroku got rid of their free tier, and I haven't redeployed elsewhere.
+
 A custom HIIT workout generator! No equipment required for these low-impact moves: perfect for at home, outside, or at the gym.
 Full stack app built with: React frontend, Express.js backend, PostgreSQL database
 
